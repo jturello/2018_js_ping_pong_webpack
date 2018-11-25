@@ -1,6 +1,6 @@
 export function pingPong (goal) {
-  let output = [];
-  for(let i=1; i <= goal; i++) {
+  var output = [];
+  for(var i=1; i <= goal; i++) {
     if (i % 15 === 0) {
       output.push("ping-pong");
     } else if (i % 3 === 0) {

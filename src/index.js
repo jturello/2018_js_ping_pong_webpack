@@ -6,8 +6,8 @@ $(document).ready(function() {
     event.preventDefault();
     $('#solution').empty();
 
-    let goal = $('#goal').val();
-    let output = pingPong(goal);
+    var goal = $('#goal').val();
+    var output = pingPong(goal);
     output.forEach(function (element) {
       $('#solution').append("<li>" + element + "</li>");
     });
