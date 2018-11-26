@@ -7,7 +7,7 @@
     "build": "webpack --mode development",
     "start": "npm run build; webpack-dev-server --open --mode development",
     "lint": "eslint src/*.js",
-    "test": "jasmine"
+    "test": "karma start karma.conf.js"
   },
   "keywords": [],
   "author": "James Turello",
@@ -19,6 +19,12 @@
     "eslint-loader": "^2.1.1",
     "html-webpack-plugin": "^3.2.0",
     "jasmine": "^3.3.0",
+    "karma": "^3.1.1",
+    "karma-chrome-launcher": "^2.2.0",
+    "karma-cli": "^1.0.1",
+    "karma-jasmine": "^2.0.1",
+    "karma-sourcemap-loader": "^0.3.7",
+    "karma-webpack": "3.0.0",
     "style-loader": "^0.23.1",
     "uglifyjs-webpack-plugin": "^2.0.1",
     "webpack": "^4.26.0",
@@ -28,6 +34,8 @@
   "dependencies": {
     "bootstrap": "^4.1.3",
     "jquery": "^3.3.1",
+    "karma-jasmine-html-reporter": "^1.4.0",
+    "karma-jquery": "^0.2.3",
     "popper.js": "^1.14.5"
   }
 }

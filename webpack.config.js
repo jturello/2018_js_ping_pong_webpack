@@ -4,15 +4,14 @@ const CleanWebpackPlugin = require('clean-webpack-plugin');
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.js',
+  entry: {
+   javascript:  './src/index.js',
+  },
   output: {
-    filename: 'bundle.js',
+    filename: "bundle.js",
     path: path.resolve(__dirname, 'dist')
   },
-  devtool: 'eval-source-map',
-  devServer: {
-    contentBase: './dist'
-  },
+  devtool: 'eval-source-map', devServer: { contentBase: './dist' },
   plugins: [
     new UglifyJsPlugin({ sourceMap: true }),
     new CleanWebpackPlugin(['dist']),
@@ -33,7 +32,10 @@ module.exports = {
       },
       {
 	test: /\.js$/,
-	exclude: /node_modules/,
+	exclude: [
+	  /node_modules/,
+	  /spec/
+	],
 	loader: 'eslint-loader'
       }
     ]
